@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nan | Retro Academic Site</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Press Start 2P', monospace;
+      font-family: 'Spline Sans Mono', monospace;
       background-color: #f3f1e7;
       color: #000;
       display: grid;
-      grid-template-columns: 240px 1fr;
+      grid-template-columns: 200px 1fr;
       min-height: 100vh;
-      background-image: linear-gradient(#d0cdc4 1px, transparent 1px), linear-gradient(90deg, #d0cdc4 1px, transparent 1px);
+      background-image: linear-gradient(#cfcac0 1px, transparent 1px), linear-gradient(90deg, #cfcac0 1px, transparent 1px);
       background-size: 20px 20px;
     }
     aside {
@@ -23,54 +23,59 @@
       border-right: 2px solid #000;
     }
     aside h1 {
-      font-size: 18px;
-      margin-bottom: 40px;
+      font-size: 16px;
+      margin-bottom: 30px;
     }
     aside nav a {
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       text-decoration: none;
       color: #000;
       font-size: 12px;
     }
     aside nav img {
-      width: 20px;
-      height: 20px;
-      margin-right: 10px;
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
     }
     main {
-      padding: 40px;
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 40px;
-      align-items: start;
+      padding: 30px;
+      max-width: 800px;
+      margin: 0 auto;
     }
     .profile-pic {
-      width: 200px;
-      height: 200px;
+      width: 160px;
+      height: 160px;
       background-color: #ccc;
       border: 2px solid #000;
       margin-bottom: 20px;
     }
     h2 {
-      font-size: 16px;
-      margin-bottom: 20px;
+      font-size: 20px;
+      margin-top: 0;
     }
     p {
-      font-size: 10px;
+      font-size: 13px;
       line-height: 1.8;
+      margin-bottom: 1em;
+    }
+    .intro {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      flex-wrap: wrap;
     }
     .spiral {
       position: absolute;
       right: 40px;
       bottom: 40px;
       opacity: 0.3;
-      width: 150px;
+      width: 120px;
     }
     footer {
       margin-top: 60px;
-      font-size: 10px;
+      font-size: 12px;
     }
   </style>
 </head>
@@ -78,26 +83,28 @@
   <aside>
     <h1>NAN</h1>
     <nav>
-      <a href="#about"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Folder_Icon_%28Windows_95_style%29.svg" alt="folder" /> ABOUT</a>
-      <a href="#publications"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Folder_Icon_%28Windows_95_style%29.svg" alt="folder" /> PUBLICATIONS</a>
-      <a href="#teaching"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Folder_Icon_%28Windows_95_style%29.svg" alt="folder" /> TEACHING</a>
-      <a href="#contact"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Folder_Icon_%28Windows_95_style%29.svg" alt="folder" /> CONTACT</a>
-      <a href="https://github.com/yourusername" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Folder_Icon_%28Windows_95_style%29.svg" alt="folder" /> GITHUB</a>
+      <a href="#about"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Icon_Folder_classic.svg" alt="folder" /> ABOUT</a>
+      <a href="#publications"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Icon_Folder_classic.svg" alt="folder" /> PUBLICATIONS</a>
+      <a href="#teaching"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Icon_Folder_classic.svg" alt="folder" /> TEACHING</a>
+      <a href="#contact"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Icon_Folder_classic.svg" alt="folder" /> CONTACT</a>
+      <a href="https://github.com/yourusername" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Icon_Folder_classic.svg" alt="folder" /> GITHUB</a>
     </nav>
   </aside>
   <main>
-    <div>
-      <img src="https://via.placeholder.com/200" alt="Profile" class="profile-pic" />
-      <p>My research focuses on solving inverse problems and their applications in signal and image processing.</p>
+    <div class="intro">
+      <div>
+        <img src="https://via.placeholder.com/160" alt="Profile" class="profile-pic" />
+        <p>My research focuses on solving inverse problems and their applications in signal and image processing.</p>
+      </div>
+      <div>
+        <h2>PhD Student in Inverse Problems & Signal Geometry</h2>
+        <p>I am a PhD student working at the intersection of inverse problems, signal processing, and geometry.</p>
+        <p>This is my retro-inspired academic website. You’ll find my work, notes, and other curiosities here.</p>
+      </div>
     </div>
-    <div>
-      <h2>PhD Student in Inverse Problems & Signal Geometry</h2>
-      <p>I am a PhD student working at the intersection of inverse problems, signal processing, and geometry.</p>
-      <p>This is my retro-inspired academic website. You’ll find my work, notes, and other curiosities here.</p>
-      <footer>
-        <p>&copy; 2025 Nan</p>
-      </footer>
-    </div>
+    <footer>
+      <p>&copy; 2025 Nan</p>
+    </footer>
   </main>
   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Golden_spiral_in_rectangle.svg" class="spiral" alt="Golden Spiral">
 </body>
