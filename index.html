@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nan | Retro Academic Site</title>
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'VT323', monospace;
+      font-family: 'Press Start 2P', monospace;
       background-color: #f3f1e7;
       color: #000;
       display: grid;
-      grid-template-columns: 220px 1fr;
+      grid-template-columns: 240px 1fr;
       min-height: 100vh;
-      background-image: linear-gradient(#e0ddd2 1px, transparent 1px), linear-gradient(90deg, #e0ddd2 1px, transparent 1px);
+      background-image: linear-gradient(#d0cdc4 1px, transparent 1px), linear-gradient(90deg, #d0cdc4 1px, transparent 1px);
       background-size: 20px 20px;
     }
     aside {
@@ -23,41 +23,54 @@
       border-right: 2px solid #000;
     }
     aside h1 {
-      font-size: 24px;
+      font-size: 18px;
       margin-bottom: 40px;
     }
     aside nav a {
-      display: block;
+      display: flex;
+      align-items: center;
       margin-bottom: 20px;
       text-decoration: none;
       color: #000;
-      font-size: 20px;
+      font-size: 12px;
+    }
+    aside nav img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
     }
     main {
       padding: 40px;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 40px;
+      align-items: start;
     }
     .profile-pic {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
       background-color: #ccc;
-      display: block;
-      margin-bottom: 30px;
       border: 2px solid #000;
+      margin-bottom: 20px;
     }
     h2 {
-      font-size: 28px;
+      font-size: 16px;
       margin-bottom: 20px;
+    }
+    p {
+      font-size: 10px;
+      line-height: 1.8;
     }
     .spiral {
       position: absolute;
       right: 40px;
       bottom: 40px;
-      opacity: 0.2;
+      opacity: 0.3;
       width: 150px;
     }
     footer {
       margin-top: 60px;
-      font-size: 18px;
+      font-size: 10px;
     }
   </style>
 </head>
@@ -65,23 +78,26 @@
   <aside>
     <h1>NAN</h1>
     <nav>
-      <a href="#about">📁 ABOUT</a>
-      <a href="#publications">📁 PUBLICATIONS</a>
-      <a href="#teaching">📁 TEACHING</a>
-      <a href="#contact">📁 CONTACT</a>
-      <a href="https://github.com/yourusername" target="_blank">📁 GITHUB</a>
+      <a href="#about"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Folder_Icon_%28Windows_95_style%29.svg" alt="folder" /> ABOUT</a>
+      <a href="#publications"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Folder_Icon_%28Windows_95_style%29.svg" alt="folder" /> PUBLICATIONS</a>
+      <a href="#teaching"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Folder_Icon_%28Windows_95_style%29.svg" alt="folder" /> TEACHING</a>
+      <a href="#contact"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Folder_Icon_%28Windows_95_style%29.svg" alt="folder" /> CONTACT</a>
+      <a href="https://github.com/yourusername" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Folder_Icon_%28Windows_95_style%29.svg" alt="folder" /> GITHUB</a>
     </nav>
   </aside>
   <main>
-    <img src="https://via.placeholder.com/150" alt="Profile" class="profile-pic" />
-
-    <h2>PhD Student in Inverse Problems & Signal Geometry</h2>
-    <p>I am a PhD student working at the intersection of inverse problems, signal processing, and geometry.</p>
-    <p>This is my retro-inspired academic website. You’ll find my work, notes, and other curiosities here.</p>
-
-    <footer>
-      <p>&copy; 2025 Nan</p>
-    </footer>
+    <div>
+      <img src="https://via.placeholder.com/200" alt="Profile" class="profile-pic" />
+      <p>My research focuses on solving inverse problems and their applications in signal and image processing.</p>
+    </div>
+    <div>
+      <h2>PhD Student in Inverse Problems & Signal Geometry</h2>
+      <p>I am a PhD student working at the intersection of inverse problems, signal processing, and geometry.</p>
+      <p>This is my retro-inspired academic website. You’ll find my work, notes, and other curiosities here.</p>
+      <footer>
+        <p>&copy; 2025 Nan</p>
+      </footer>
+    </div>
   </main>
   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Golden_spiral_in_rectangle.svg" class="spiral" alt="Golden Spiral">
 </body>
