@@ -59,10 +59,11 @@
     .profile-pic {
       width: 180px;
       height: 180px;
-      background-color: #ccc;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Pixel_person_placeholder.svg/512px-Pixel_person_placeholder.svg.png');
+      background-size: cover;
+      background-position: center;
       border: 2px solid #000;
       margin-bottom: 15px;
-      object-fit: cover;
     }
     h2 {
       font-size: 22px;
@@ -77,8 +78,9 @@
       position: absolute;
       right: 30px;
       bottom: 30px;
-      opacity: 0.2;
-      width: 120px;
+      opacity: 0.25;
+      width: 150px;
+      filter: grayscale(100%) contrast(150%);
     }
     footer {
       margin-top: 60px;
@@ -91,17 +93,17 @@
   <aside>
     <h1>NAN</h1>
     <nav>
-      <a href="#about"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Icon_Folder_classic.svg" alt="folder" /> ABOUT</a>
-      <a href="#publications"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Icon_Folder_classic.svg" alt="folder" /> PUBLICATIONS</a>
-      <a href="#teaching"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Icon_Folder_classic.svg" alt="folder" /> TEACHING</a>
-      <a href="#contact"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Icon_Folder_classic.svg" alt="folder" /> CONTACT</a>
-      <a href="https://github.com/yourusername" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Icon_Folder_classic.svg" alt="folder" /> GITHUB</a>
+      <a href="#about"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Folder_icon_64x64.svg/32px-Folder_icon_64x64.svg.png" alt="folder" /> ABOUT</a>
+      <a href="#publications"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Folder_icon_64x64.svg/32px-Folder_icon_64x64.svg.png" alt="folder" /> PUBLICATIONS</a>
+      <a href="#teaching"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Folder_icon_64x64.svg/32px-Folder_icon_64x64.svg.png" alt="folder" /> TEACHING</a>
+      <a href="#contact"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Folder_icon_64x64.svg/32px-Folder_icon_64x64.svg.png" alt="folder" /> CONTACT</a>
+      <a href="https://github.com/yourusername" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Folder_icon_64x64.svg/32px-Folder_icon_64x64.svg.png" alt="folder" /> GITHUB</a>
     </nav>
   </aside>
   <main>
     <div class="intro">
       <div>
-        <img src="https://via.placeholder.com/180" alt="Profile" class="profile-pic" />
+        <div class="profile-pic"></div>
         <p>My research focuses on solving inverse problems and their applications in signal and image processing.</p>
       </div>
       <div>
