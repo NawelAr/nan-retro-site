@@ -6,6 +6,9 @@
   <title>Nan | Retro Academic Site</title>
   <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Spline Sans Mono', monospace;
@@ -17,6 +20,7 @@
       background-image: linear-gradient(#d4d1c7 1px, transparent 1px), linear-gradient(90deg, #d4d1c7 1px, transparent 1px);
       background-size: 20px 20px;
       position: relative;
+      overflow-x: hidden;
     }
     aside {
       background-color: #ede9dd;
@@ -39,17 +43,23 @@
       transition: transform 0.2s ease;
     }
     aside nav a:hover {
-      transform: scale(1.05);
+      transform: translateX(4px);
     }
     aside nav img {
       width: 16px;
       height: 16px;
       margin-right: 8px;
+      image-rendering: pixelated;
     }
     main {
       padding: 40px 30px;
       max-width: 900px;
       margin: 0 auto;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .intro {
       display: flex;
@@ -88,17 +98,33 @@
       font-size: 11px;
       text-align: center;
     }
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f5f3ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
   </style>
 </head>
 <body>
+  <div id="loading-screen">Loading your retro site...</div>
   <aside>
     <h1>NAN</h1>
     <nav>
-      <a href="#about"><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Classic_folder_icon.svg" alt="folder" /> ABOUT</a>
-      <a href="#publications"><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Classic_folder_icon.svg" alt="folder" /> PUBLICATIONS</a>
-      <a href="#teaching"><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Classic_folder_icon.svg" alt="folder" /> TEACHING</a>
-      <a href="#contact"><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Classic_folder_icon.svg" alt="folder" /> CONTACT</a>
-      <a href="https://github.com/yourusername" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Classic_folder_icon.svg" alt="folder" /> GITHUB</a>
+      <a href="#about"><img src="https://raw.githubusercontent.com/google/material-design-icons/master/device/2x_web/ic_folder_black_24dp.png" alt="folder" /> ABOUT</a>
+      <a href="#publications"><img src="https://raw.githubusercontent.com/google/material-design-icons/master/device/2x_web/ic_folder_black_24dp.png" alt="folder" /> PUBLICATIONS</a>
+      <a href="#teaching"><img src="https://raw.githubusercontent.com/google/material-design-icons/master/device/2x_web/ic_folder_black_24dp.png" alt="folder" /> TEACHING</a>
+      <a href="#contact"><img src="https://raw.githubusercontent.com/google/material-design-icons/master/device/2x_web/ic_folder_black_24dp.png" alt="folder" /> CONTACT</a>
+      <a href="https://github.com/yourusername" target="_blank"><img src="https://raw.githubusercontent.com/google/material-design-icons/master/device/2x_web/ic_folder_black_24dp.png" alt="folder" /> GITHUB</a>
     </nav>
   </aside>
   <main>
@@ -117,6 +143,14 @@
       <p>&copy; 2025 Nan — Built with retro soul 💾</p>
     </footer>
   </main>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Golden_spiral_logarithmic.svg/512px-Golden_spiral_logarithmic.svg.png" class="spiral" alt="Golden Spiral">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Golden_spiral_in_rectangle.svg" class="spiral" alt="Golden Spiral">
+  <script>
+    window.addEventListener('load', () => {
+      const loadingScreen = document.getElementById('loading-screen');
+      if (loadingScreen) {
+        loadingScreen.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
